@@ -2,7 +2,7 @@ import type { HttpContext } from '@adonisjs/core/http'
 import User from '../models/user.js'
 
 export default class UsersController {
-    
+
     public async index({response}: HttpContext){
         const users = await User.all()
         return response.json(users)
